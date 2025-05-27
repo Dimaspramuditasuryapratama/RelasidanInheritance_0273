@@ -30,4 +30,3 @@ class ibu {
             cout << endl;
         }
         #endif
-    
