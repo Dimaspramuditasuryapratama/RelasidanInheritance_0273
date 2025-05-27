@@ -1,32 +1,32 @@
 #ifndef IBU_H
 #define IBU_H
 
-class ibu {
+class ibu{
     public:
-        string nama:
+        string nama;
         vector<anak*> daftar_anak;
 
-        ibu(string pNama): nama(pNama) {
-            cout << "Ibu \"" << nama << "\" ada\n";
+        ibu (string pNama): nama(pNama){
+            cout << "ibu\"" << nama << "\" ada\n";
         }
 
-        ~ibu() {
-            cout << "Ibu \"" << nama << "\" tidak ada\n";
+        ~ibu(){
+            cout << "ibu\"" << nama << "\" tidak ada\n";
         }
-        void tambahkanAnak(anak*);
+
+        void tambahAnak(anak*);
         void cetakAnak();
-        };
-        void ibu::tambahkanAnak(anak* pAnak) {
-            daftar_anak.push_back(pAnak);
-        }
-        void ibu::cetakAnak() {
-            cout << "Daftar anak dari Ibu \"" << this->nama << "\":\n";
-            // for (auto& a : daftar_anak) {
-            //    cout << a->nama << "\n";
-            //}
-            for (int i = 0; i < daftar_anak.size(); i++) {
-                cout << daftar_anak[i]->nama << endl;
-            }
-            cout << endl;
-        }
-        #endif
+};
+
+void ibu ::tambahAnak(anak* pAnak){
+    daftar_anak.push_back(pAnak);
+}
+
+void ibu ::cetakAnak(){
+    cout << "Daftar Anak dari IBU \"" << this->nama<< "\":\n";
+    for (int i=0; i < daftar_anak.size(); i++){
+        cout << daftar_anak[i]->nama<<endl;
+    }
+    cout << endl;
+}
+#endif
